@@ -1,0 +1,5 @@
+#!/bin/sh
+# rt-probe entry point: run the stdlib-only Python CLI.
+# Works from any directory; the package lives next to this script.
+DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+PYTHONPATH="$DIR${PYTHONPATH:+:$PYTHONPATH}" exec python3 -m rtprobe.cli "$@"
