@@ -17,19 +17,15 @@ Category: **Developer Tooling & Host Tools** · Pool $50,000
 - [x] Local git repo initialised, committed, remote configured
       (`git@github.com:opelphantom96/rt-probe.git`)
 - [x] Fresh-clone check from local repo (clone → tests → dry-run)
+- [x] Public GitHub repo `opelphantom96/rt-probe` created
+      (18 Nov ~05:50 WIB) — https://github.com/opelphantom96/rt-probe
+- [x] Push + verify remote — `master -> master` (`3e524f8`) pushed;
+      `git ls-remote` + fresh `git clone` from GitHub verified
+- [x] Tests re-verified 24 Nov 2026 — 91/91 passing
+      (`./run_tests.sh`); fresh live run `--repeat 3` completed
 
-## Blocked — needs the user / parent agent
+## Remaining — needs the user / parent agent
 
-- [ ] **Create the empty public GitHub repo `opelphantom96/rt-probe`**
-      — the VM has no GitHub API token (`gh` not authenticated, no
-      `GH_TOKEN` in env), and repo creation cannot be done over SSH.
-      Create it on github.com (New repository → public, no README —
-      the tree already has one), then the push is one command:
-      `GIT_SSH_COMMAND="ssh -F ~/workspace/qodo-hackathon/ssh-config" git push -u origin master`
-      (SSH key already verified: `Hi opelphantom96!`).
-- [ ] **Push + verify remote** — after the repo exists: push, then
-      `git ls-remote` + a fresh `git clone` from GitHub to confirm
-      the remote matches local.
 - [ ] **Record + upload the demo video (<3 min, public YouTube)** —
       see `VIDEO-SCRIPT.md`. Needs the user's YouTube account.
 - [ ] **Submit on Devpost** — paste the fields from

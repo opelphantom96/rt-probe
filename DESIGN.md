@@ -357,3 +357,47 @@ exact NONE decomposition — the robust claim is NONE ≫ INHERIT.
    wiped by a VM restart) and the stale Status section updated.
 8. **Repo + submission.** Create the public GitHub repo, push, and
    prepare the Devpost submission (repo + <3 min demo video).
+   ✅ DONE 18 Nov 2026 — **repo LIVE and public**:
+   https://github.com/opelphantom96/rt-probe (master, commit
+   `3e524f8`, MIT). Push `master -> master` succeeded 18 Nov
+   ~05:50 WIB and a fresh clone from GitHub was verified
+   (tests pass, tree clean).
+   - **Licence: MIT** (LICENSE, copyright 2026 opelphantom96).
+     Chosen over Apache-2.0: the standard permissive licence for a
+     small developer tool; simplest for a hackathon entry, no patent
+     grant needed for this code.
+   - `.gitignore` extended: out/, probes/bin/, `__pycache__`, plus
+     output/, *.img/*.iso/*.qcow2, ifs.bin, .venv/, *.pem/*.key,
+     licenses/, editor noise. Tree grep-checked: no secrets, no
+     licence files.
+   - README polished as front page: verified-results section
+     (pooled `--repeat 3` numbers + prio contrast) + Licence
+     section + SUBMISSION.md pointer.
+   - New files: `DEVPOST-DRAFT.md` (title, tagline, category,
+     full description incl. Inspiration/How built/Challenges/
+     Accomplishments/Learned/Next, build+run instructions,
+     "Evidence of QNX use", verified numbers, prize tracks),
+     `SUBMISSION.md` (checklist with done vs blocked),
+     `VIDEO-SCRIPT.md` (2:30 script + storyboard, 6 shots with
+     narration + on-screen text, recording checklist).
+   - Local git repo: `master`, commit `3e524f8` ("RT-Probe: QNX
+     real-time latency workbench…"), author Opel
+     <andibugil94@gmail.com> (same as agent-factory), remote
+     `origin git@github.com:opelphantom96/rt-probe.git`.
+   - Verified: tests 91/91 in the working tree AND in a fresh
+     `file://` clone (`/tmp/rt-probe-clone`); clone tree is clean
+     (no out/, probes/bin/, *.pyc, licence files); `./rt-probe
+     run --dry-run` prints the full plan from the clone.
+   - **Repo live:** public repo `opelphantom96/rt-probe` created
+     on github.com 18 Nov ~05:50 WIB; push `master -> master`
+     (`3e524f8`) succeeded via the Qodo tunnel SSH setup
+     (`ssh-config` + `git-proxy.py`, key `id_qodo_agent_factory`
+     — a user key, not repo-scoped); verified with `git
+     ls-remote` + a fresh `git clone` from GitHub.
+   - **Re-verified 24 Nov 2026:** tests 91/91 re-run in the
+     working tree (see run log in `out/`); fresh live run
+     `./rt-probe run --repeat 3` completed for video footage.
+   - **NOT done (user-side):** demo video record + public YouTube
+     upload (script ready in VIDEO-SCRIPT.md); Devpost submit
+     itself (draft ready in DEVPOST-DRAFT.md). Deadline 16 Dec
+     2026 02:00 WIB.
